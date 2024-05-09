@@ -22,5 +22,7 @@
          #data_output tr:nth-child(n+501) {
         display: none;
             }
+
+         .searchInput{display: flex;margin-top: 130px; margin-left: 137vh;}
           
          
