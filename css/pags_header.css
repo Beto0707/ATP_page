@@ -1,8 +1,6 @@
-header {position: fixed;top: 0;left: 0;width: 100%;display: flex;justify-content: space space-around;transition: 0.7s;padding: 30px 20px;z-index: 100;}
+header {position: fixed;top: 0;left: 0;width: 100%;display: flex;justify-content: center;transition: 0.7s;padding: 30px 20px;z-index: 100;}
 
 header.abajo {background: white;padding: 35px 20px;}
-
-header .logo {position: relative;color: #fff;font-weight: bold;font-size: 2em;letter-spacing: 2px;transition: 1.5s;text-decoration: none;}
 
 nav {display: flex;justify-content: center;align-items: center;}
 
@@ -14,9 +12,7 @@ header ul li a {position: relative;font-family: helvetica;margin: 0 15px;text-de
 
 header.abajo .logo,header.abajo ul li a {color: #000;}
 
-.logo {left: 45%;}
-
-.boton-menu {background-color: transparent;color: black;border: none;cursor: pointer;z-index: 1000;}
+.boton-menu {background-color: transparent;color: black;border: none;cursor: pointer;z-index: 1000;display: flex;}
 
 .menu-desplegable {display: none;position: absolute;top: 0;left: 0;background-color: #333;padding: 0px;width: 110vh;height: 30vh; align-items: center;}
 
@@ -42,4 +38,4 @@ div.menu-desplegable a.atp_menu:hover {background-color: #AEB4BF;cursor: auto;}
 
 div.menu-desplegable a.atp_menu img {width: 200px;height: auto;position: absolute;left: 0;cursor: pointer;}
 
-header .main{position: absolute;left: 40%;}
+.main{align-items: center;}
