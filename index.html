@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+  <link rel="stylesheet" href="./css/pags_header.css">
+  <link rel="stylesheet" href="./css/main_def.css">
+
+  <!--Integramos al main el sistema del carrusel-->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+</head>
+
+<body>
+  <header>
+    <a class="main" href="./index.html">
+      <img class="logo" src="./public/botones/menu/logo_atp.png" width="100px"></img>
+    </a>
+    <button class="boton-menu" onclick="toggleMenu()"><img src="./public/botones/menu/menu_boton.png" width="70px"></button>
+    <div class="menu-desplegable" id="menuDesplegable">
+
+      <a class="atp_menu" href="./index.html">
+        <img src="./public/botones/menu/logo_atp.png"></img>
+      </a>
+      <button class="cerrar-menu" onclick="toggleMenu()"><img src="./public/botones/menu/menu_boton_cerrar.png"></button>
+      <a href="./australian_open.html">Australian Open</a>
+      <a href="./roland_garros.html">Roland Garros</a>
+      <a href="./wimbledon.html">Wimbledon</a>
+      <a href="./us_open.html">Us Open</a>
+      <a href="./rankings_pagina.html">Rankings</a>
+      <a href="https://www.itftennis.com/media/2512/2020-rules-of-tennis-spanish.pdf" target="_blank">Reglamento</a>
+
+    </div>
+    </div>
+
+  </header>
+
+
+  <div class="swiper">
+    <!-- Clase necesaria para el funcionamiento -->
+    <div class="swiper-wrapper">
+      <!-- Slides -->
+      <div class="swiper-slide"><img class="foto1" src="https://e00-elmundo.uecdn.es/assets/multimedia/imagenes/2021/06/11/16234469316547.jpg" alt=""></div>
+      <div class="swiper-slide"><img class="foto2" src="https://cdn.suwalls.com/wallpapers/sports/juan-martin-del-potro-25026-2880x1800.jpg" alt=""></div>
+      <div class="swiper-slide"><img class="foto3" src="https://mrwallpaper.com/images/hd/denis-shapovalov-in-atp-tour-ar6hrjmv087kmvct.jpg" alt=""></div>
+      <div class="swiper-slide"><img class="foto4" src="https://www.wlns.com/wp-content/uploads/sites/50/2022/07/8e96fe8c8c9c4557bd4110dd369c2e33.jpg?w=2560&h=1440&crop=1" alt=""></div>
+      <div class="swiper-slide"><img class="foto5" src="https://cloudfront-us-east-2.images.arcpublishing.com/reuters/EZBVJHBDKFPUHFPC27U3P2KRCU.jpg" alt=""></div>
+      <div class="swiper-slide"><img class="foto6" src="https://smartcdn.gprod.postmedia.digital/torontosun/wp-content/uploads/2023/05/0531thiago-seyboth-wild-french-open-scaled-e1685464506607.jpg?quality=100&strip=all" alt=""></div>
+    </div>
+  </div>
+
+  <div class="titulos" style="padding-top: 100px;">
+    <h3 class="titulos">Sobre la ATP</h3>
+    <p class="p_titulos">La Asociación de Tenis Profesional (ATP) es la máxima autoridad en el mundo del tenis masculino profesional. Desde su establecimiento en 1972, la ATP ha desempeñado un papel fundamental en la organización, promoción y desarrollo del tenis a nivel global. Su impacto se extiende desde las canchas más prestigiosas del Grand Slam hasta los torneos más pequeños que se llevan a cabo en distintos rincones del planeta.</p>
+    <p class="p_titulos">El propósito fundamental de la ATP es fomentar la excelencia en el tenis masculino, brindando una plataforma para que los jugadores de élite demuestren su talento y compitan entre sí por los títulos más codiciados del deporte. A través de un extenso calendario de eventos que abarca todo el año, la ATP ofrece a los aficionados la oportunidad de disfrutar de emocionantes encuentros, llenos de habilidad, intensidad y drama.</p>
+    <p class="p_titulos">Uno de los pilares fundamentales de la ATP es la clasificación mundial, que clasifica a los jugadores según su desempeño en los torneos. Esta clasificación, actualizada semanalmente, sirve como un barómetro del éxito en el mundo del tenis, proporcionando una medida objetiva del rendimiento de cada jugador y generando un ambiente de competencia continua y desafiante.</p>
+    <p class="p_titulos">Los torneos de la ATP se dividen en diferentes categorías, que van desde los prestigiosos eventos de Grand Slam, como el Abierto de Australia, Roland Garros, Wimbledon y el Abierto de Estados Unidos, hasta los torneos de menor escala, como los ATP 250, ATP 500 y los Masters 1000. Cada uno de estos torneos posee su propia atmósfera y atractivo, atrayendo a jugadores y aficionados de todo el mundo.</p>
+    <p class="p_titulos">Además de organizar torneos de tenis de clase mundial, la ATP también se dedica a promover el deporte a través de iniciativas de desarrollo y programas comunitarios. Estas actividades van desde la promoción del tenis juvenil hasta la implementación de proyectos de responsabilidad social que utilizan el poder del tenis para generar un impacto positivo en las comunidades locales.</p> 
+    
+  </div>
+
+
+  <div>
+    <h3 class="titulos" style="padding-top: 100px;">Torneos Destacados</h3>
+  </div>
+
+  <div style="float:left;margin:10px;align-items: center;display: flex; flex-direction: column; padding-left: 3%;">
+    <a href="./australian_open.html"><button class="boton_redondo_ao"></button></a>
+  </div>
+  <div style="float:left;margin:10px;align-items: center;display: flex; flex-direction: column; padding-left: 3%;">
+    <!--Esto lo usamos para ubicar el boton-->
+    <a href="./us_open.html"><button class="boton_redondo_us"></button></a>
+  </div>
+  <div style="float:left;margin:10px;align-items: center;display: flex; flex-direction: column; padding-left: 3%;">
+    <a href="./roland_garros.html"><button class="boton_redondo_rg"></button></a>
+  </div>
+  <div style="float:left;margin:10px;align-items: center;display: flex; flex-direction: column; padding-left: 3%;">
+    <a href="./wimbledon.html"><button class="boton_redondo_w"></button></a>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <script src=" ./js/script.js"></script>
+  
+</body>
+
+</html>

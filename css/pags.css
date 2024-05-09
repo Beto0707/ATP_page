@@ -1,0 +1,46 @@
+@import url('https://fonts.googleapis.com/css2?family=League+Gothic&display=swap');
+  
+
+h2.nombre_torneo {font-size: 45px; font-family: 'League Gothic', sans-serif; padding-left: 10%; padding-top: 10%;}
+
+h3.inicio  {padding-left: 10%;font-family: 'League Gothic', sans-serif; font-size: 30px;}
+
+div.titulos{height: 55%;}
+
+h3.titulos{ font-family: "League Gothic", sans-serif;padding-left: 10%; font-size: 80px; padding-top: 40px;}
+
+h3.titulos1{ font-family: "League Gothic", sans-serif;padding-left: 10%; font-size: 80px; padding-top: 400px;}
+
+p.p_titulos{font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;padding-left: 10%; font-size: 20px;padding-right: 10%;}
+
+.entradas_icono{width: 40vh;padding-left: 10%;padding-top: 10px;}
+
+h3.destacados{padding-top: 40px;}
+
+h3{font-family: 'League Gothic', sans-serif;}
+
+
+body.australianopen{margin: 0; background-image: url(../public/fondos/ao_fondo.png);background-position: 0%;background-size:cover;}
+body.usopen{margin: 0; background-image: url(../public/fondos/us_fondo.png);background-position: 20%;background-size:cover;}
+body.w{margin: 0; background-image: url(../public/fondos/w_fondo.png);background-position: 10%;background-size:cover;}
+body.rg{margin: 0; background-image: url(../public/fondos/rg_fondo.png);background-position: 20%;background-size:cover;}
+body.rankings{margin: 0; background-color: #AEB4BF;}
+body.ultimos{margin: 0; background-image: url(../public/fondos/ulti_fondo.png);background-position: 20%;background-size:cover;}
+
+div.img_abajo_header_usopen{background-image: url(../public/layouts/us_layouts.png);background-position: center;background-size: 100% 110%; height: 55%;}
+div.img_abajo_header_australianopen{background-image: url(../public/layouts/ao_layouts.png);background-position: center;background-size: 100% 110%; height: 55%;}
+div.img_abajo_header_w{background-image: url(../public/layouts/w_layouts.png);background-position: center;background-size: 100% 110%; height: 55%;}
+div.img_abajo_header_rg{background-image: url(../public/layouts/rg_layouts.png);background-position: center;background-size: 100% 110%; height: 55%;}
+
+div.raquetas {
+    max-width: 1360px; 
+    margin: 0 auto; 
+}
+.menu-desplegable.oculto {
+    display: none;
+}
+
+
+
+
+

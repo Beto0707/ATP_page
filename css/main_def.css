@@ -1,0 +1,47 @@
+@import url('https://fonts.googleapis.com/css2?family=League+Gothic&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+
+h2.nombre_torneo {font-size: 45px; font-family: 'League Gothic', sans-serif; padding-left: 10%; padding-top: 10%;}
+
+h3.inicio  {padding-left: 10%;font-family: 'League Gothic', sans-serif;}
+
+div.titulos{height: 55%;}
+
+h3.titulos{ font-family: "League Gothic", sans-serif;padding-left: 10%; font-size: 80px;}
+
+p.p_titulos{font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;padding-left: 10%; font-size: 20px;padding-right: 10%; padding-top: 40px;}
+
+h3{font-family: 'League Gothic', sans-serif;}
+
+* {margin: 0;padding: 0;box-sizing: border-box;}
+
+.swiper {width: 100%;height: 100vh;overflow: hidden;}
+
+.swiper img.foto1 {object-fit: cover;width: 100%;height: auto;object-position: 100vh 0 50vh;}
+
+.swiper img.foto2 {object-fit: cover;width: 100%;height: auto;object-position: 100vh 0 50vh;}
+
+.swiper img.foto3 {object-fit: cover;width: 100%;height: auto;object-position: 100vh 0 50vh;}
+
+.swiper img.foto4 {object-fit: cover;width: 100%;height: auto;object-position: 100vh 0 50vh;}
+
+.swiper img.foto5 {object-fit: cover;width: 100%;height: auto;object-position: 100vh 0 50vh;}
+
+.swiper img.foto6 {object-fit: cover;width: 100%;height: auto;object-position: 100vh 0 50vh;}
+
+.boton_redondo_ao {border-radius: 50%;width: 200px;height: 200px;background-color: white;font-size: 16px;border: none;cursor: pointer;display: flex;align-items: center;background-image: url("../public/botones/redondos/ao_azul.png");background-size: cover;background-repeat: no-repeat;transition: background-color 0.6s ease;background-position: center;background-size: 88%;position: absolute;margin-left: 10%;}
+
+.boton_redondo_ao:hover {background-color: #049dd9;background-image: url("../public/botones/redondos/ao_blanco.png");background-position: center;background-size: 87%;}
+
+.boton_redondo_us {border-radius: 50%;width: 200px;height: 200px;background-color: white;font-size: 16px;border: none;cursor: pointer;display: flex;align-items: center;background-image: url("../public/botones/redondos/us_azul.png");background-size: cover;background-repeat: no-repeat;transition: background-color 0.6s ease;background-position: center;background-size: 97%;margin-left: 65%;position: absolute;}
+
+.boton_redondo_us:hover {background-color: #049dd9;background-image: url("../public/botones/redondos/us_blanco.png");background-position: center;background-size: 97%;}
+
+.boton_redondo_rg {border-radius: 50%;width: 200px;height: 200px;background-color: white;font-size: 16px;border: none;cursor: pointer;display: flex;align-items: center;background-image: url("../public/botones/redondos/rg_azul.png");background-size: cover;background-repeat: no-repeat;transition: background-color 0.6s ease;background-position: center;background-size: 200%;margin-left: 20%;position: absolute;}
+
+.boton_redondo_rg:hover {background-color: #049dd9;background-image: url("../public/botones/redondos/rg_blanco.png");background-position: center;background-size: 200%;}
+
+.boton_redondo_w {border-radius: 50%;width: 200px;height: 200px;background-color: white;font-size: 16px;border: none;cursor: pointer;display: flex;align-items: center;background-image: url("../public/botones/redondos/w_azul.png");background-size: cover;background-repeat: no-repeat;transition: background-color 0.6s ease;background-position: center;background-size: 160%;margin-left: 35%;position: absolute;}
+
+.boton_redondo_w:hover {background-color: #049dd9;background-image: url("../public/botones/redondos/w_blanco.png");background-position: center;background-size: 160%;}

@@ -1,0 +1,26 @@
+*{font-family: "League Gothic", sans-serif; font-size: 20px;}
+         table{
+            width:  1000px;
+            margin: 30px auto;
+         }
+          
+         table th{
+            padding: 10px 0;
+            background-color: #f4f4f4;
+            /* background-color: #fff; */
+            border:none;
+         }
+          
+         table td{
+            padding: 10px;
+            border:  none;
+            width: 18%;
+            text-align: center;
+            background-color: #fff;
+         }
+
+         #data_output tr:nth-child(n+501) {
+        display: none;
+            }
+          
+         
