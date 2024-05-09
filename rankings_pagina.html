@@ -1,5 +1,10 @@
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,34 +14,47 @@
     <link rel="stylesheet" href="./css/pags.css">
     <link rel="stylesheet" href="https://cdn.datatables.net/2.0.3/css/dataTables.dataTables.css">
     <link rel="stylesheet" href="./css/rankings.css">
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+        integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css"
+        integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+
+
 </head>
+
 <body class="rankings">
     <header>
         <a class="main" href="../index.html">
             <img class="logo" src="../public/botones/menu/logo_atp.png" width="100px"></img>
         </a>
-        <button class="boton-menu" onclick="toggleMenu()"><img src="../public/botones/menu/menu_boton.png" width="70px"></button>
+        <button class="boton-menu" onclick="toggleMenu()"><img src="../public/botones/menu/menu_boton.png"
+                width="70px"></button>
         <div class="menu-desplegable" id="menuDesplegable">
             <a class="atp_menu" href="../index.html">
                 <img src="../public/botones/menu/logo_atp.png"></img>
             </a>
-            <button class="cerrar-menu" onclick="toggleMenu()"><img src="../public/botones/menu/menu_boton_cerrar.png"></button>
+            <button class="cerrar-menu" onclick="toggleMenu()"><img
+                    src="../public/botones/menu/menu_boton_cerrar.png"></button>
             <a href="./australian_open.html">Australian Open</a>
             <a href="./roland_garros.html">Roland Garros</a>
             <a href="./wimbledon.html">Wimbledon</a>
             <a href="./us_open.html">Us Open</a>
             <a href="./rankings_pagina.html">Rankings</a>
-            <a href="https://www.itftennis.com/media/2512/2020-rules-of-tennis-spanish.pdf" target="_blank">Reglamento</a>
+            <a href="https://www.itftennis.com/media/2512/2020-rules-of-tennis-spanish.pdf"
+                target="_blank">Reglamento</a>
         </div>
     </header>
-    <div class="container h-100">
-        <div class="d-flex justify-content-center h-100">
-          <div class="searchbar">
-            <input type="text" id="searchInput" placeholder="Buscar..." class="searchInput"   >
-            <a href="#" class="search_icon"><i class="fas fa-search"></i></a>
-          </div>
+
+    <div>
+        <div class="nav">
+            <div class="searchbar">
+                <input class="search_input" type="text" name="" placeholder="Search..." id="searchInput">
+                <a class="search_icon"><i class="fas fa-search"></i></a>
+            </div>
         </div>
-      </div>
+    </div>
+
     <table id="rankingTable">
         <thead>
             <tr>
@@ -54,24 +72,18 @@
     <script src="./js/script.js"></script>
 
     <script>
-      // Realiza una solicitud para obtener el contenido del archivo "rankings.json" del servidor
-fetch("rankings.json")
-    // Maneja la respuesta del servidor: convierte la respuesta en formato JSON
-    .then(function(response){
-        return response.json();
-    })
-    // Maneja los datos JSON obtenidos del archivo "rankings.json"
-    .then(function(data){
-        // Selecciona el elemento HTML con el ID "data_output" donde se mostrarán los resultados
-        let placeholder = document.querySelector("#data_output");
-        // Inicializa una cadena vacía para almacenar el contenido HTML de la tabla
-        let out = "";
-        // Itera sobre cada elemento "ranking" en la matriz "data.rankings"
-        for(let ranking of data.rankings){
-            // Itera sobre cada "competitor_ranking" dentro de la matriz "ranking.competitor_rankings"
-            for(let competitor_ranking of ranking.competitor_rankings){
-                // Construye las filas de la tabla utilizando los datos de cada "competitor_ranking"
-                out +=`
+
+        fetch("rankings.json")
+
+            .then(function (response) {
+                return response.json();
+            })
+            .then(function (data) {
+                let placeholder = document.querySelector("#data_output");
+                let out = "";
+                for (let ranking of data.rankings) {
+                    for (let competitor_ranking of ranking.competitor_rankings) {
+                        out += `
                     <tr>
                         <td>${competitor_ranking.rank}</td> <!-- Muestra el rango del competidor -->
                         <td>${competitor_ranking.competitor.name}</td> <!-- Muestra el nombre del competidor -->
@@ -79,42 +91,39 @@ fetch("rankings.json")
                         <td>${competitor_ranking.points}</td> <!-- Muestra los puntos del competidor -->
                     </tr>
                 `;
-            }
-        }
-        // Inserta el contenido HTML construido en el elemento seleccionado
-        placeholder.innerHTML = out;
-    }) // <- Asegúrate de cerrar correctamente este `.then()`
-    .catch(function(error) {
-        console.log('Hubo un problema con la petición Fetch:' + error.message);
-    });
+                    }
+                }
+                placeholder.innerHTML = out;
+            })
+            .catch(function (error) {
+                console.log('Hubo un problema con la petición Fetch:' + error.message);
+            });
 
-// Agregar evento de escucha para el campo de búsqueda
-document.querySelector("#searchInput").addEventListener("input", function() {
-   // Obtiene el texto de búsqueda, lo convierte a minúsculas y elimina los espacios en blanco al principio y al final
-   let searchText = this.value.trim().toLowerCase();
-   // Selecciona todas las filas de la tabla
-   let rows = document.querySelectorAll("#data_output tr");
+        document.querySelector("#searchInput").addEventListener("input", function () {
+            let searchText = this.value.trim().toLowerCase();
+            let rows = document.querySelectorAll("#data_output tr");
 
-   // Itera sobre cada fila de la tabla
-   rows.forEach(function(row) {
-      // Obtiene el texto en la segunda celda de la fila (nombre del competidor) y lo convierte a minúsculas
-      let nameCell = row.querySelector("td:nth-child(2)").textContent.toLowerCase();
-      // Obtiene el texto en la primera celda de la fila (rango del competidor), elimina espacios en blanco al principio y al final
-      let rankCell = row.querySelector("td:nth-child(1)").textContent.trim();
-      
-      // Verifica si el texto de búsqueda está vacío o coincide con el nombre del competidor o el rango del competidor
-      if (searchText === "" || nameCell.includes(searchText) || rankCell === searchText) {
-         // Si el texto de búsqueda está vacío o coincide con el nombre del competidor o el rango del competidor, muestra la fila
-         row.style.display = "";
-      } else {
-         // Si el texto de búsqueda no coincide con el nombre del competidor ni el rango del competidor, oculta la fila
-         row.style.display = "none";
-      }
-   });
-});
+            rows.forEach(function (row) {
+                let nameCell = row.querySelector("td:nth-child(2)").textContent.toLowerCase();
+                let rankCell = row.querySelector("td:nth-child(1)").textContent.trim();
+
+                if (searchText === "" || nameCell.includes(searchText) || rankCell === searchText) {
+                    row.style.display = "";
+                } else {
+                    row.style.display = "none";
+                }
+            });
+        });
+        document.getElementById("searchbar").addEventListener("mouseleave", function (event) {
+            event.stopPropagation();
+        });
+
+
+
 
 
 
     </script>
 </body>
+
 </html>
