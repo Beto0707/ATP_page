@@ -1,11 +1,16 @@
-header {position: fixed;top: 0;left: 0;width: 100%;display: flex;justify-content: center;transition: 0.7s;padding: 30px 20px;z-index: 100;}
-
+.boton-menu {position: fixed;top: 35px;left: 15px;background-color: transparent;color: black;border: none;cursor: pointer;z-index: 1000;}
+   
+header {position: fixed;top: 0;left: 0;width: 100%;transition: 0.7s;padding: 30px 20px;z-index: 100;display: inline-block;text-align: center; /* Para centrar horizontalmente los elementos dentro del encabezado */}
+   
+.main {display: flex;justify-content: center; /* Para distribuir los elementos a lo largo del encabezado */align-items: center;}
+   
+   
 header.abajo {background: white;padding: 35px 20px;}
-
+   
 nav {display: flex;justify-content: center;align-items: center;}
-
+   
 header ul {position: relative;display: flex;justify-content: center;align-items: center;}
-
+   
 header ul li {list-style: none;}
 
 header ul li a {position: relative;font-family: helvetica;margin: 0 15px;text-decoration: none;color: black;letter-spacing: 2px;font-weight: 600;transition: 0.7s;}
@@ -14,15 +19,15 @@ header.abajo .logo,header.abajo ul li a {color: #000;}
 
 .boton-menu {background-color: transparent;color: black;border: none;cursor: pointer;z-index: 1000;display: flex;}
 
-.menu-desplegable {display: none;position: absolute;top: 0;left: 0;background-color: #333;padding: 0px;width: 110vh;height: 30vh; align-items: center;}
+.menu-desplegable {display: none;position: absolute;top: 0;left: 0;background-color: #333;padding: 0px;width: 110vh;height: 30vh;align-items: center;}
 
-.mostrar-menu {display: block; }
+.mostrar-menu {display: block;}
 
-.mostrar-menu .boton-menu{display: none;}
+.mostrar-menu .boton-menu {display: none;}
 
-div.menu-desplegable a {display: flex;flex-direction: column;height: 10vh;text-decoration: none;color: black;background-color: #AEB4BF;font-size: 40px;align-items: center;justify-content: center;font-family: 'League Gothic', sans-serif;}
+div.menu-desplegable a {display: flex;flex-direction: column;height: 10vh;text-decoration: none;color: black;background-color: #aeb4bf;font-size: 40px;align-items: center;justify-content: center;font-family: "League Gothic", sans-serif;}
 
-div.menu-desplegable a:hover {background-color: black;width: 100%;background-size: cover;background-repeat: no-repeat;background-position: bottom;justify-content: center;color: #fff;font-family: 'League Gothic', sans-serif;}
+div.menu-desplegable a:hover {background-color: black;width: 100%;background-size: cover;background-repeat: no-repeat;background-position: bottom;justify-content: center;color: #fff;font-family: "League Gothic", sans-serif;}
 
 .menu-desplegable button.cerrar-menu {display: none;background-color: transparent;border: none;cursor: pointer;position: absolute;margin-top: 5%;left: 85%;}
 
@@ -30,12 +35,10 @@ div.menu-desplegable a:hover {background-color: black;width: 100%;background-siz
 
 .menu-desplegable button.cerrar-menu img {width: 5vh;}
 
-div.menu-desplegable img {margin-left: 40%;height: 35%;margin-top: 7%;margin-bottom: 5%}
+div.menu-desplegable img {margin-left: 40%;height: 35%;margin-top: 7%;margin-bottom: 5%;}
 
 div.menu-desplegable a.atp_menu {padding-bottom: 100px;padding-top: 80px;}
 
-div.menu-desplegable a.atp_menu:hover {background-color: #AEB4BF;cursor: auto;}
+div.menu-desplegable a.atp_menu:hover {background-color: #aeb4bf;cursor: auto;}
 
 div.menu-desplegable a.atp_menu img {width: 200px;height: auto;position: absolute;left: 0;cursor: pointer;}
-
-.main{align-items: center;}
